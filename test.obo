@@ -1,5 +1,6 @@
 format-version: 1.2
 ontology: TEST
+name: TEST
 property_value: owl:versionInfo "TEST version 0.1" xsd:string
 
 [Term]
