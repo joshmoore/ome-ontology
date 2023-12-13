@@ -1,0 +1,3684 @@
+name: OME
+id: https://www.openmicroscopy.org/model
+imports:
+- linkml:types
+prefixes:
+  OME: https://www.openmicroscopy.org/model#
+  linkml: https://w3id.org/linkml/
+default_prefix: OME
+slots:
+  rights_holder: {}
+  rights_held: {}
+  id: {}
+  description: {}
+  experimenter_ref: {}
+  experimenter_group_ref: {}
+  dataset_ref:
+    multivalued: true
+    range: DatasetRef
+  annotation_ref:
+    multivalued: true
+    range: AnnotationRef
+  name: {}
+  image_ref: {}
+  folder_ref:
+    multivalued: true
+    range: FolderRef
+  roiref:
+    multivalued: true
+    range: Roiref
+  attenuation:
+    range: float
+  wavelength:
+    range: float
+  wavelength_unit: {}
+  light_source_settings: {}
+  type_value: {}
+  microbeam_manipulation:
+    multivalued: true
+    range: MicrobeamManipulation
+  position_x:
+    range: float
+  position_xunit: {}
+  position_y:
+    range: float
+  position_yunit: {}
+  index:
+    range: integer
+  well_sample:
+    multivalued: true
+    range: WellSample
+  reagent_ref: {}
+  column:
+    range: integer
+  row:
+    range: integer
+  external_description: {}
+  external_identifier: {}
+  color:
+    range: integer
+  well_sample_ref:
+    multivalued: true
+    range: WellSampleRef
+  maximum_field_count:
+    range: integer
+  well:
+    multivalued: true
+    range: Well
+  plate_acquisition:
+    multivalued: true
+    range: PlateAcquisition
+  status: {}
+  column_naming_convention: {}
+  row_naming_convention: {}
+  well_origin_x:
+    range: float
+  well_origin_xunit: {}
+  well_origin_y:
+    range: float
+  well_origin_yunit: {}
+  rows:
+    range: integer
+  columns:
+    range: integer
+  field_index:
+    range: integer
+  reagent_identifier: {}
+  reagent:
+    multivalued: true
+    range: Reagent
+  plate_ref:
+    multivalued: true
+    range: PlateRef
+  protocol_identifier: {}
+  protocol_description: {}
+  reagent_set_description: {}
+  reagent_set_identifier: {}
+  first_name: {}
+  middle_name: {}
+  last_name: {}
+  email: {}
+  institution: {}
+  user_name: {}
+  leader:
+    multivalued: true
+    range: Leader
+  manufacturer: {}
+  model: {}
+  serial_number: {}
+  lot_number: {}
+  value: {}
+  k: {}
+  m:
+    multivalued: true
+    range: M
+  power:
+    range: float
+  power_unit: {}
+  map: {}
+  pump: {}
+  laser_medium: {}
+  frequency_multiplication:
+    range: integer
+  tuneable:
+    range: boolean
+  pulse: {}
+  pockel_cell:
+    range: boolean
+  repetition_rate:
+    range: float
+  repetition_rate_unit: {}
+  gain:
+    range: float
+  voltage:
+    range: float
+  voltage_unit: {}
+  offset:
+    range: float
+  zoom:
+    range: float
+  amplification_gain:
+    range: float
+  correction: {}
+  immersion: {}
+  lens_na:
+    range: float
+  nominal_magnification:
+    range: float
+  calibrated_magnification:
+    range: float
+  working_distance:
+    range: float
+  working_distance_unit: {}
+  iris:
+    range: boolean
+  excitation_filter_ref:
+    multivalued: true
+    range: FilterRef
+  dichroic_ref: {}
+  emission_filter_ref:
+    multivalued: true
+    range: FilterRef
+  cut_in:
+    range: float
+  cut_in_unit: {}
+  cut_out:
+    range: float
+  cut_out_unit: {}
+  cut_in_tolerance:
+    range: float
+  cut_in_tolerance_unit: {}
+  cut_out_tolerance:
+    range: float
+  cut_out_tolerance_unit: {}
+  transmittance:
+    range: float
+  transmittance_range: {}
+  filter_wheel: {}
+  microscope: {}
+  generic_excitation_source:
+    multivalued: true
+    range: GenericExcitationSource
+  light_emitting_diode:
+    multivalued: true
+    range: LightEmittingDiode
+  filament:
+    multivalued: true
+    range: Filament
+  arc:
+    multivalued: true
+    range: Arc
+  laser:
+    multivalued: true
+    range: Laser
+  detector:
+    multivalued: true
+    range: Detector
+  objective:
+    multivalued: true
+    range: Objective
+  filter_set:
+    multivalued: true
+    range: FilterSet
+  filter:
+    multivalued: true
+    range: Filter
+  dichroic:
+    multivalued: true
+    range: Dichroic
+  correction_collar:
+    range: float
+  medium: {}
+  refractive_index:
+    range: float
+  temperature:
+    range: float
+  temperature_unit: {}
+  air_pressure:
+    range: float
+  air_pressure_unit: {}
+  humidity:
+    range: float
+  co2_percent:
+    range: float
+  x:
+    range: float
+  xunit: {}
+  y:
+    range: float
+  yunit: {}
+  z:
+    range: float
+  zunit: {}
+  read_out_rate:
+    range: float
+  read_out_rate_unit: {}
+  binning: {}
+  integration:
+    range: integer
+  detector_settings: {}
+  filter_set_ref: {}
+  light_path: {}
+  samples_per_pixel:
+    range: integer
+  illumination_type: {}
+  pinhole_size:
+    range: float
+  pinhole_size_unit: {}
+  acquisition_mode: {}
+  contrast_method: {}
+  excitation_wavelength:
+    range: float
+  excitation_wavelength_unit: {}
+  emission_wavelength:
+    range: float
+  emission_wavelength_unit: {}
+  fluor: {}
+  ndfilter:
+    range: float
+  pockel_cell_setting:
+    range: integer
+  compression: {}
+  big_endian:
+    range: boolean
+  length:
+    range: integer
+  file_name: {}
+  uuid: {}
+  ifd:
+    range: integer
+  first_z:
+    range: integer
+  first_t:
+    range: integer
+  first_c:
+    range: integer
+  plane_count:
+    range: integer
+  hash_sha1: {}
+  the_z:
+    range: integer
+  the_t:
+    range: integer
+  the_c:
+    range: integer
+  delta_t:
+    range: float
+  delta_tunit: {}
+  exposure_time:
+    range: float
+  exposure_time_unit: {}
+  position_z:
+    range: float
+  position_zunit: {}
+  channel:
+    multivalued: true
+    range: Channel
+  bin_data: {}
+  tiff_data:
+    multivalued: true
+    range: TiffData
+  metadata_only: {}
+  plane:
+    multivalued: true
+    range: Plane
+  dimension_order: {}
+  significant_bits:
+    range: integer
+  interleaved:
+    range: boolean
+  size_x:
+    range: integer
+  size_y:
+    range: integer
+  size_z:
+    range: integer
+  size_c:
+    range: integer
+  size_t:
+    range: integer
+  physical_size_x:
+    range: float
+  physical_size_xunit: {}
+  physical_size_y:
+    range: float
+  physical_size_yunit: {}
+  physical_size_z:
+    range: float
+  physical_size_zunit: {}
+  time_increment:
+    range: float
+  time_increment_unit: {}
+  experiment_ref: {}
+  instrument_ref: {}
+  objective_settings: {}
+  imaging_environment: {}
+  stage_label: {}
+  pixels: {}
+  microbeam_manipulation_ref:
+    multivalued: true
+    range: MicrobeamManipulationRef
+  any_element:
+    multivalued: true
+  namespace: {}
+  annotator: {}
+  href: {}
+  sha1: {}
+  external: {}
+  size:
+    range: integer
+  mimetype: {}
+  binary_file: {}
+  xmlannotation:
+    multivalued: true
+    range: Xmlannotation
+  file_annotation:
+    multivalued: true
+    range: FileAnnotation
+  list_annotation:
+    multivalued: true
+    range: ListAnnotation
+  long_annotation:
+    multivalued: true
+    range: LongAnnotation
+  double_annotation:
+    multivalued: true
+    range: DoubleAnnotation
+  comment_annotation:
+    multivalued: true
+    range: CommentAnnotation
+  boolean_annotation:
+    multivalued: true
+    range: BooleanAnnotation
+  timestamp_annotation:
+    multivalued: true
+    range: TimestampAnnotation
+  tag_annotation:
+    multivalued: true
+    range: TagAnnotation
+  term_annotation:
+    multivalued: true
+    range: TermAnnotation
+  map_annotation:
+    multivalued: true
+    range: MapAnnotation
+  a00:
+    range: float
+  a10:
+    range: float
+  a01:
+    range: float
+  a11:
+    range: float
+  a02:
+    range: float
+  a12:
+    range: float
+  transform: {}
+  fill_color:
+    range: integer
+  fill_rule: {}
+  stroke_color:
+    range: integer
+  stroke_width:
+    range: float
+  stroke_width_unit: {}
+  stroke_dash_array: {}
+  text: {}
+  font_family: {}
+  font_size:
+    range: integer
+  font_size_unit: {}
+  font_style: {}
+  locked:
+    range: boolean
+  points: {}
+  marker_start: {}
+  marker_end: {}
+  x1:
+    range: float
+  y1:
+    range: float
+  x2:
+    range: float
+  y2:
+    range: float
+  radius_x:
+    range: float
+  radius_y:
+    range: float
+  width:
+    range: float
+  height:
+    range: float
+  label:
+    multivalued: true
+    range: Label
+  polygon:
+    multivalued: true
+    range: Polygon
+  polyline:
+    multivalued: true
+    range: Polyline
+  line:
+    multivalued: true
+    range: Line
+  ellipse:
+    multivalued: true
+    range: Ellipse
+  point:
+    multivalued: true
+    range: Point
+  mask:
+    multivalued: true
+    range: Mask
+  rectangle:
+    multivalued: true
+    range: Rectangle
+  union: {}
+  metadata_file: {}
+  rights: {}
+  project:
+    multivalued: true
+    range: Project
+  dataset:
+    multivalued: true
+    range: Dataset
+  folder:
+    multivalued: true
+    range: Folder
+  experiment:
+    multivalued: true
+    range: Experiment
+  plate:
+    multivalued: true
+    range: Plate
+  screen:
+    multivalued: true
+    range: Screen
+  experimenter:
+    multivalued: true
+    range: Experimenter
+  experimenter_group:
+    multivalued: true
+    range: ExperimenterGroup
+  instrument:
+    multivalued: true
+    range: Instrument
+  image:
+    multivalued: true
+    range: Image
+  structured_annotations: {}
+  roi:
+    multivalued: true
+    range: Roi
+  binary_only: {}
+  creator: {}
+classes:
+  Rights:
+    description: "The rights holder of this data and the rights held.\n\n:ivar rights_holder:\
+      \ The rights holder for this data. [plain-text\n    multi-line string] e.g.\
+      \ \"Copyright (C) 2002 - 2016 Open\n    Microscopy Environment\"\n:ivar rights_held:\
+      \ The rights held by the rights holder. [plain-text\n    multi-line string]\
+      \ e.g. \"All rights reserved\" or \"Creative\n    Commons Attribution 3.0 Unported\
+      \ License\""
+    slots:
+    - rights_holder
+    - rights_held
+    slot_usage:
+      rights_holder: {}
+      rights_held: {}
+  ExperimenterRef:
+    description: 'This empty element has a required Experimenter ID and an optional
+      DocumentID
+
+      attribute which refers to one of the Experimenters defined within OME.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  ExperimenterGroupRef:
+    description: 'This empty element has a reference (the ExperimenterGroup ID attribute)
+      to a
+
+      ExperimenterGroup defined within OME.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  DatasetRef:
+    description: 'The DatasetRef element refers to a Dataset by specifying the Dataset
+      ID
+
+      attribute.
+
+
+      One or more DatasetRef elements may be listed within the Image
+
+      element to specify what Datasets the Image belongs to.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  AnnotationRef:
+    description: 'The AnnotationRef element is a reference to an element derived from
+      the
+
+      CommonAnnotation element.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Project:
+    description: "The Project ID is required. Datasets can be grouped into projects\
+      \ using a\nmany-to-many relationship.\n\nA Dataset may belong to one or more\
+      \ Projects by including one or more ProjectRef elements which refer to Project\
+      \ IDs.\nProjects do not directly contain images - only by virtue of containing\
+      \ datasets, which themselves contain images.\n\n:ivar description: A description\
+      \ for the project. [plain-text multi-\n    line string]\n:ivar experimenter_ref:\n\
+      :ivar experimenter_group_ref:\n:ivar dataset_ref:\n:ivar annotation_ref:\n:ivar\
+      \ name:\n:ivar id:"
+    slots:
+    - description
+    - experimenter_ref
+    - experimenter_group_ref
+    - dataset_ref
+    - annotation_ref
+    - name
+    - id
+    slot_usage:
+      description: {}
+      experimenter_ref: {}
+      experimenter_group_ref: {}
+      dataset_ref:
+        multivalued: true
+        range: DatasetRef
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  ImageRef:
+    description: The ImageRef element is a reference to an Image element.
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Dataset:
+    description: "An element specifying a collection of images that are always processed\n\
+      together.\n\nImages can belong to more than one Dataset, and a Dataset may\n\
+      contain more than one Image. Images contain one or more DatasetRef\nelements\
+      \ to specify what datasets they belong to. Once a Dataset has\nbeen processed\
+      \ in any way, its collection of images cannot be\naltered. The ExperimenterRef\
+      \ and ExperimenterGroupRef elements\nspecify the person and group this Dataset\
+      \ belongs to. Projects may\ncontain one or more Datasets, and Datasets may belong\
+      \ to one or more\nProjects. This relationship is specified by listing DatasetRef\n\
+      elements within the Project element.\n\n:ivar description: A description for\
+      \ the dataset. [plain-text multi-\n    line string]\n:ivar experimenter_ref:\n\
+      :ivar experimenter_group_ref:\n:ivar image_ref:\n:ivar annotation_ref:\n:ivar\
+      \ name: A name for the dataset that is suitable for presentation\n    to the\
+      \ user.\n:ivar id:"
+    slots:
+    - description
+    - experimenter_ref
+    - experimenter_group_ref
+    - image_ref
+    - annotation_ref
+    - name
+    - id
+    slot_usage:
+      description: {}
+      experimenter_ref: {}
+      experimenter_group_ref: {}
+      image_ref:
+        multivalued: true
+        range: ImageRef
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  FolderRef:
+    description: 'The FolderRef element refers to a Folder by specifying the Folder
+      ID
+
+      attribute.
+
+
+      One or more FolderRef elements may be listed within the Folder
+
+      element to specify what Folders the Folder contains. This tree
+
+      hierarchy must be acyclic.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Roiref:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Folder:
+    description: "An element specifying a possibly heterogeneous collection of data.\n\
+      \nFolders may contain Folders so that data may be organized within a\ntree of\
+      \ Folders. Data may be in multiple Folders but a Folder may\nnot be in more\
+      \ than one other Folder.\n\n:ivar description: A description for the folder.\
+      \ [plain-text multi-\n    line string]\n:ivar folder_ref:\n:ivar image_ref:\n\
+      :ivar roiref:\n:ivar annotation_ref:\n:ivar id:\n:ivar name: A name for the\
+      \ folder that is suitable for presentation\n    to the user."
+    slots:
+    - description
+    - folder_ref
+    - image_ref
+    - roiref
+    - annotation_ref
+    - id
+    - name
+    slot_usage:
+      description: {}
+      folder_ref:
+        multivalued: true
+        range: FolderRef
+      image_ref:
+        multivalued: true
+        range: ImageRef
+      roiref:
+        multivalued: true
+        range: Roiref
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  UnitsLength:
+    description: "The units used to represent a length.\n\n:cvar YM: yottameter SI\
+      \ unit.\n:cvar ZM: zettameter SI unit.\n:cvar EM: exameter SI unit.\n:cvar PM:\
+      \ petameter SI unit.\n:cvar TM: terameter SI unit.\n:cvar GM: gigameter SI unit.\n\
+      :cvar MM: megameter SI unit.\n:cvar KM: kilometer SI unit.\n:cvar HM: hectometer\
+      \ SI unit.\n:cvar DAM: decameter SI unit.\n:cvar M: meter SI unit.\n:cvar DM:\
+      \ decimeter SI unit.\n:cvar CM: centimeter SI unit.\n:cvar MM_1: millimeter\
+      \ SI unit.\n:cvar M_1: micrometer SI unit.\n:cvar NM: nanometer SI unit.\n:cvar\
+      \ PM_1: picometer SI unit.\n:cvar FM: femtometer SI unit.\n:cvar AM: attometer\
+      \ SI unit.\n:cvar ZM_1: zeptometer SI unit.\n:cvar YM_1: yoctometer SI unit.\n\
+      :cvar VALUE: \xE5ngstr\xF6m SI-derived unit.\n:cvar THOU: thou Imperial unit\
+      \ (or mil, 1/1000 inch).\n:cvar LI: line Imperial unit (1/12 inch).\n:cvar IN:\
+      \ inch Imperial unit.\n:cvar FT: foot Imperial unit.\n:cvar YD: yard Imperial\
+      \ unit.\n:cvar MI: terrestrial mile Imperial unit.\n:cvar UA: astronomical unit\
+      \ SI-derived unit. The official term is ua\n    as the SI standard assigned\
+      \ AU to absorbance unit.\n:cvar LY: light year.\n:cvar PC: parsec.\n:cvar PT:\
+      \ typography point Imperial-derived unit (1/72 inch). Use of\n    this unit\
+      \ should be limited to font sizes.\n:cvar PIXEL: pixel abstract unit.  This\
+      \ is not convertible to any\n    other length unit without a calibrated scaling\
+      \ factor. Its use\n    should should be limited to ROI objects, and converted\
+      \ to an\n    appropriate length units using the PhysicalSize units of the\n\
+      \    Image the ROI is attached to.\n:cvar REFERENCE_FRAME: reference frame abstract\
+      \ unit.  This is not\n    convertible to any other length unit without a scaling\
+      \ factor.\n    Its use should be limited to uncalibrated stage positions, and\n\
+      \    converted to an appropriate length unit using a calibrated\n    scaling\
+      \ factor."
+  LightSourceSettings:
+    description: ":ivar id:\n:ivar attenuation: The Attenuation of the light source\
+      \ [units:none]\n    A fraction, as a value from 0.0 to 1.0.\n:ivar wavelength:\
+      \ The Wavelength of the light source. Units are set\n    by WavelengthUnit.\n\
+      :ivar wavelength_unit: The units of the Wavelength of the light\n    source\
+      \ - default:nanometres[nm]"
+    slots:
+    - id
+    - attenuation
+    - wavelength
+    - wavelength_unit
+    slot_usage:
+      id: {}
+      attenuation:
+        range: float
+      wavelength:
+        range: float
+      wavelength_unit: {}
+  MicrobeamManipulationValue:
+    description: An enumeration.
+  MicrobeamManipulation:
+    description: "Defines a microbeam operation type and the region of the image it\
+      \ was\napplied to.\n\nThe LightSourceRef element is a reference to a LightSource\
+      \ specified\nin the Instrument element which was used for a technique other\
+      \ than\nillumination for the purpose of imaging. For example, a laser used\n\
+      for photobleaching.\n\n:ivar description: A description for the Microbeam Manipulation.\n\
+      \    [plain-text multi-line string]\n:ivar roiref:\n:ivar experimenter_ref:\n\
+      :ivar light_source_settings:\n:ivar id:\n:ivar type_value: The type of manipulation\
+      \ performed."
+    slots:
+    - description
+    - roiref
+    - experimenter_ref
+    - light_source_settings
+    - id
+    - type_value
+    slot_usage:
+      description: {}
+      roiref:
+        multivalued: true
+        range: Roiref
+      experimenter_ref: {}
+      light_source_settings:
+        multivalued: true
+        range: LightSourceSettings
+      id: {}
+      type_value:
+        multivalued: true
+        range: MicrobeamManipulationValue
+  ExperimentValue:
+    description: An enumeration.
+  Experiment:
+    description: "This element describes the type of experiment.\n\nThe required Type\
+      \ attribute must contain one or more entries from the following list:\nFP FRET\
+      \ Time-lapse 4-D+ Screen Immunocytochemistry FISH Electrophysiology  Ion-Imaging\
+      \ Colocalization PGI/Documentation\nFRAP Photoablation Optical-Trapping Photoactivation\
+      \ Fluorescence-Lifetime Spectral-Imaging Other\nFP refers to fluorescent proteins,\
+      \ PGI/Documentation is not a 'data' image.\nThe optional Description element\
+      \ may contain free text to further describe the experiment.\n\n:ivar description:\
+      \ A description for the experiment. [plain-text\n    multi-line string]\n:ivar\
+      \ experimenter_ref: This is a link to the Experimenter who\n    conducted the\
+      \ experiment\n:ivar microbeam_manipulation:\n:ivar type_value: A term to describe\
+      \ the type of experiment.\n:ivar id:"
+    slots:
+    - description
+    - experimenter_ref
+    - microbeam_manipulation
+    - type_value
+    - id
+    slot_usage:
+      description: {}
+      experimenter_ref: {}
+      microbeam_manipulation:
+        multivalued: true
+        range: MicrobeamManipulation
+      type_value:
+        multivalued: true
+        range: ExperimentValue
+      id: {}
+  WellSample:
+    description: "WellSample is an individual image that has been captured within\
+      \ a Well.\n\n:ivar image_ref: This is the main link to the core Image element\n\
+      :ivar id:\n:ivar position_x: The X position of the field (image) within the\n\
+      \    well relative to the well origin defined on the Plate. Units are\n    set\
+      \ by PositionXUnit.\n:ivar position_xunit: The units of the position in X -\n\
+      \    default:reference frame.\n:ivar position_y: The Y position of the field\
+      \ (image) within the\n    well relative to the well origin defined on the Plate.\
+      \ Units are\n    set by PositionYUnit.\n:ivar position_yunit: The units of the\
+      \ position in Y -\n    default:reference frame.\n:ivar timepoint: The time-point\
+      \ at which the image started to be\n    collected\n:ivar index: This records\
+      \ the order of the well samples. Each index\n    should be unique for a given\
+      \ plate but they do not have to be\n    sequential, there may be gaps if part\
+      \ of the dataset is missing.\n    In the user interface the displayed value\
+      \ of the index will be\n    calculated modulo the number of PlateAcquisitions\
+      \ for the plate."
+    slots:
+    - image_ref
+    - id
+    - position_x
+    - position_xunit
+    - position_y
+    - position_yunit
+    - index
+    slot_usage:
+      image_ref: {}
+      id: {}
+      position_x:
+        range: float
+      position_xunit: {}
+      position_y:
+        range: float
+      position_yunit: {}
+      index:
+        range: integer
+  ReagentRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Well:
+    description: "A Well is a component of the Well/Plate/Screen construct to describe\n\
+      screening applications.\n\nA Well has a number of WellSample elements that link\
+      \ to the Images\ncollected in this well. The ReagentRef links any Reagents that\
+      \ were\nused in this Well. A well is part of only one Plate. The origin for\n\
+      the row and column identifiers is the top left corner of the plate\nstarting\
+      \ at zero. i.e The top left well of a plate is index (0,0)\n\n:ivar well_sample:\n\
+      :ivar reagent_ref:\n:ivar annotation_ref:\n:ivar id:\n:ivar column: This is\
+      \ the column index of the well, the origin is\n    the top left corner of the\
+      \ plate with the first column of cells\n    being column zero. i.e top left\
+      \ is (0,0) The combination of Row,\n    Column has to be unique for each well\
+      \ in a plate.\n:ivar row: This is the row index of the well, the origin is the\
+      \ top\n    left corner of the plate with the first row of wells being row\n\
+      \    zero. i.e top left is (0,0) The combination of Row, Column has\n    to\
+      \ be unique for each well in a plate.\n:ivar external_description: A description\
+      \ of the externally defined\n    identifier for this plate.\n:ivar external_identifier:\
+      \ The ExternalIdentifier attribute may\n    contain a reference to an external\
+      \ database.\n:ivar type_value: A human readable identifier for the screening\n\
+      \    status. e.g. empty, positive control, negative control, control,\n    experimental,\
+      \ etc.\n:ivar color: A marker color used to highlight the well - encoded as\n\
+      \    RGBA The default value \"-1\" is #FFFFFFFF so solid white (it is a\n  \
+      \  signed 32 bit value) NOTE: Prior to the 2012-06 schema the\n    default value\
+      \ was incorrect and produced a transparent red not\n    solid white."
+    slots:
+    - well_sample
+    - reagent_ref
+    - annotation_ref
+    - id
+    - column
+    - row
+    - external_description
+    - external_identifier
+    - type_value
+    - color
+    slot_usage:
+      well_sample:
+        multivalued: true
+        range: WellSample
+      reagent_ref: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      column:
+        range: integer
+      row:
+        range: integer
+      external_description: {}
+      external_identifier: {}
+      type_value: {}
+      color:
+        range: integer
+  WellSampleRef:
+    description: The WellSampleRef element is a reference to a WellSample element.
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  PlateAcquisition:
+    description: "PlateAcquisition is used to describe a single acquisition run for\
+      \ a plate.\n\nThis object is used to record the set of images acquired in a\
+      \ single\nacquisition run. The Images for this run are linked to\nPlateAcquisition\
+      \ through WellSample.\n\n:ivar description: A description for the PlateAcquisition.\n\
+      :ivar well_sample_ref:\n:ivar annotation_ref:\n:ivar id:\n:ivar name:\n:ivar\
+      \ end_time: Time when the last image of this acquisition was\n    collected\n\
+      :ivar start_time: Time when the first image of this acquisition was\n    collected\n\
+      :ivar maximum_field_count: The maximum number of fields (well\n    samples)\
+      \ in any well in this PlateAcquisition. This is only used\n    to speed up user\
+      \ interaction by stopping the reading of every\n    well sample."
+    slots:
+    - description
+    - well_sample_ref
+    - annotation_ref
+    - id
+    - name
+    - maximum_field_count
+    slot_usage:
+      description: {}
+      well_sample_ref:
+        multivalued: true
+        range: WellSampleRef
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      maximum_field_count:
+        range: integer
+  NamingConvention:
+    description: "Predefined list of values for the well labels.\n\n:cvar LETTER:\
+      \ While the label type 'number' has a clear meaning the\n    'letter' type is\
+      \ more complex. If you have less than 26 values\n    use letters A to Z. Once\
+      \ you get more than 26 values there are\n    several different approaches in\
+      \ use. One we have see include:\n    Single letter, then double letter each\
+      \ running A to Z, right\n    first e.g. A, B, C, ... X, Y, Z, AA, AB, AC, ...\
+      \ AY, AZ, BA, BB,\n    ... This is the format used by Microsoft Excel so users\
+      \ may be\n    familiar with it. This is the approach we use in the OMERO\n \
+      \   client applications. CAPITALsmall, each running A to Z, small\n    first\
+      \ e.g. Aa, Ab, Ac, ... Ax, Ay, Az, Ba, Bb, Bc, ... By, Bz,\n    Ca, Cb, ...\
+      \ This is in use by some plate manufactures. Single\n    letter, then double\
+      \ letter, then triple letter, and so on e.g.\n    A, B, C, ... X, Y, Z, AA,\
+      \ BB, CC, ... YY, ZZ, AAA, BBB, ... This\n    has the advantage that the first\
+      \ 26 are the same as the standard\n    but has a problem an the labels get wider\
+      \ and wider leading to\n    user interface problems.\n:cvar NUMBER: 1, 2, 3,\
+      \ ..."
+  Plate:
+    description: "This element identifies microtiter plates within a screen.\n\nA\
+      \ plate can belong to more than one screen. The Screen(s) that a\nplate belongs\
+      \ to are specified by the ScreenRef element. The Plate\nID and Name attributes\
+      \ are required. The Wells in a plate are\nnumbers from the top-left corner in\
+      \ a grid starting at zero. i.e.\nThe top-left well of a plate is index (0,0)\n\
+      \n:ivar description: A description for the plate.\n:ivar well:\n:ivar annotation_ref:\n\
+      :ivar plate_acquisition:\n:ivar id:\n:ivar name: The Name identifies the plate\
+      \ to the user. It is used\n    much like the ID, and so must be unique within\
+      \ the document. If\n    a plate name is not available when one is needed it\
+      \ will be\n    constructed in the following order: 1. If name is available use\n\
+      \    it. 2. If not use \"Start time - End time\" (NOTE: Not a\n    subtraction!\
+      \ A string representation of the two times separated\n    by a dash.) 3. If\
+      \ these times are not available use the Plate\n    ID.\n:ivar status: A textual\
+      \ annotation of the current state of the plate\n    with respect to the experiment\
+      \ work-flow; e.g. 1. Seed cell:\n    done; 2. Transfection: done;      3. Gel\
+      \ doc: todo.\n:ivar external_identifier: The ExternalIdentifier attribute may\n\
+      \    contain a reference to an external database.\n:ivar column_naming_convention:\
+      \ The ColumnNamingConvention\n:ivar row_naming_convention: The RowNamingConvention\n\
+      :ivar well_origin_x: This defines the X position to use for the\n    origin\
+      \ of the fields (individual images) taken in a well. It is\n    used with the\
+      \ X in the WellSample to display the fields in the\n    correct position relative\
+      \ to each other. Each Well in the plate\n    has the same well origin. Units\
+      \ are set by WellOriginXUnit. In\n    the OMERO clients by convention we display\
+      \ the WellOrigin in the\n    center of the view.\n:ivar well_origin_xunit: The\
+      \ units of the well origin in X -\n    default:reference frame.\n:ivar well_origin_y:\
+      \ This defines the Y position to use for the\n    origin of the fields (individual\
+      \ images) taken in a well. It is\n    used with the Y in the WellSample to display\
+      \ the fields in the\n    correct position relative to each other. Each Well\
+      \ in the plate\n    has the same well origin.  Units are set by WellOriginYUnit.\
+      \ In\n    the OMERO clients by convention we display the WellOrigin in the\n\
+      \    center of the view.\n:ivar well_origin_yunit: The units of the well origin\
+      \ in Y -\n    default:reference frame.\n:ivar rows: The number of rows in the\
+      \ plate\n:ivar columns: The number of columns in the plate\n:ivar field_index:\
+      \ The index of the WellSample to display as the\n    default Field"
+    slots:
+    - description
+    - well
+    - annotation_ref
+    - plate_acquisition
+    - id
+    - name
+    - status
+    - external_identifier
+    - column_naming_convention
+    - row_naming_convention
+    - well_origin_x
+    - well_origin_xunit
+    - well_origin_y
+    - well_origin_yunit
+    - rows
+    - columns
+    - field_index
+    slot_usage:
+      description: {}
+      well:
+        multivalued: true
+        range: Well
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      plate_acquisition:
+        multivalued: true
+        range: PlateAcquisition
+      id: {}
+      status: {}
+      external_identifier: {}
+      column_naming_convention: {}
+      row_naming_convention: {}
+      well_origin_x:
+        range: float
+      well_origin_xunit: {}
+      well_origin_y:
+        range: float
+      well_origin_yunit: {}
+      rows:
+        range: integer
+      columns:
+        range: integer
+      field_index:
+        range: integer
+  Reagent:
+    description: "Reagent is used to describe a chemical or some other physical experimental\n\
+      parameter.\n\n:ivar description: A long description for the reagent.\n:ivar\
+      \ annotation_ref:\n:ivar id:\n:ivar name: A short name for the reagent\n:ivar\
+      \ reagent_identifier: This is a reference to an external (to\n    OME) representation\
+      \ of the Reagent. It serves as a foreign key\n    into an external database.\
+      \ - It is sometimes referred to as\n    ExternalIdentifier."
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - name
+    - reagent_identifier
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      reagent_identifier: {}
+  PlateRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Screen:
+    description: "The Screen element is a grouping for Plates.\n\nThe required attribute\
+      \ is the Screen's Name and ID - both must be unique within the document.\nThe\
+      \ Screen element may contain an ExternalRef attribute that refers to an external\
+      \ database.\nA description of the screen may be specified in the Description\
+      \ element.\nScreens may contain overlapping sets of Plates i.e.      Screens\
+      \ and Plates have a many-to-many relationship.\nPlates contain one or more ScreenRef\
+      \ elements to specify what screens they belong to.\n\n:ivar description: A description\
+      \ for the screen.\n:ivar reagent:\n:ivar plate_ref: The PlateRef element is\
+      \ a reference to a Plate\n    element. Screen elements may have one or more\
+      \ PlateRef elements\n    to define the plates that are part of the screen. Plates\
+      \ may\n    belong to more than one screen.\n:ivar annotation_ref:\n:ivar id:\n\
+      :ivar name:\n:ivar protocol_identifier: A pointer to an externally defined\n\
+      \    protocol, usually in a screening database.\n:ivar protocol_description:\
+      \ A description of the screen protocol;\n    may contain very detailed information\
+      \ to reproduce some of that\n    found in a screening database.\n:ivar reagent_set_description:\
+      \ A description of the set of reagents;\n    may contain very detailed information\
+      \ to reproduce some of that\n    information found in a screening database.\n\
+      :ivar reagent_set_identifier: A pointer to an externally defined set\n    of\
+      \ reagents, usually in a screening database/automation\n    database.\n:ivar\
+      \ type_value: A human readable identifier for the screen type;\n    e.g. RNAi,\
+      \ cDNA, SiRNA, etc. This string is likely to become an\n    enumeration in future\
+      \ releases."
+    slots:
+    - description
+    - reagent
+    - plate_ref
+    - annotation_ref
+    - id
+    - name
+    - protocol_identifier
+    - protocol_description
+    - reagent_set_description
+    - reagent_set_identifier
+    - type_value
+    slot_usage:
+      description: {}
+      reagent:
+        multivalued: true
+        range: Reagent
+      plate_ref:
+        multivalued: true
+        range: PlateRef
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      protocol_identifier: {}
+      protocol_description: {}
+      reagent_set_description: {}
+      reagent_set_identifier: {}
+      type_value: {}
+  Experimenter:
+    description: "This element describes a person who performed an imaging experiment.\n\
+      \nThis person may also be a user of the OME system, in which case the\nUserName\
+      \ element contains their login name. Experimenters may belong\nto one or more\
+      \ groups which are specified using one or more\nExperimenterGroupRef elements.\n\
+      \n:ivar annotation_ref:\n:ivar id:\n:ivar first_name: First name, sometime called\
+      \ christian name or\n    given name or forename. [plain text string]\n:ivar\
+      \ middle_name: Any other names. [plain text string]\n:ivar last_name: A person's\
+      \ last name sometimes called surname or\n    family name. [plain text string]\n\
+      :ivar email: A person's email address. [valid email address as\n    string]\n\
+      :ivar institution: A person's Institution The organizing structure\n    that\
+      \ people belong to other than groups.  A university, or\n    company, etc. We\
+      \ do not specify a department element, and do not\n    mean for Institution\
+      \ to be used in this way. We simply wish to\n    say XXX at YYY.  Where YYY\
+      \ has a better chance of being tied to\n    a geographically fixed location\
+      \ and of being more recognizable\n    than a group of experimenters. [plain\
+      \ text string]\n:ivar user_name: This is the username of the experimenter (in\
+      \ a\n    'unix' or 'database' sense). [plain text string]"
+    slots:
+    - annotation_ref
+    - id
+    - first_name
+    - middle_name
+    - last_name
+    - email
+    - institution
+    - user_name
+    slot_usage:
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      first_name: {}
+      middle_name: {}
+      last_name: {}
+      email: {}
+      institution: {}
+      user_name: {}
+  Leader:
+    description: 'Contact information for a ExperimenterGroup leader specified using
+      a reference
+
+      to an Experimenter element defined elsewhere in the document.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  ExperimenterGroup:
+    description: "The ExperimenterGroupID is required.\n\nInformation should ideally\
+      \ be specified for at least one Leader as a\ncontact for the group. The Leaders\
+      \ are themselves Experimenters.\n\n:ivar description: A description for the\
+      \ group. [plain-text multi-\n    line string]\n:ivar experimenter_ref:\n:ivar\
+      \ leader:\n:ivar annotation_ref:\n:ivar name:\n:ivar id:"
+    slots:
+    - description
+    - experimenter_ref
+    - leader
+    - annotation_ref
+    - name
+    - id
+    slot_usage:
+      description: {}
+      experimenter_ref:
+        multivalued: true
+        range: ExperimenterRef
+      leader:
+        multivalued: true
+        range: Leader
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  MicroscopeType:
+    description: An enumeration.
+  Microscope:
+    description: The microscope's manufacturer specification.
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - type_value
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      type_value: {}
+  UnitsPower:
+    description: 'The units used to represent power.
+
+
+      :cvar YW: yottawatt unit.
+
+      :cvar ZW: zettawatt unit.
+
+      :cvar EW: exawatt unit.
+
+      :cvar PW: petawatt unit.
+
+      :cvar TW: terawatt unit.
+
+      :cvar GW: gigawatt unit.
+
+      :cvar MW: megawatt unit.
+
+      :cvar K_W: kilowatt unit.
+
+      :cvar H_W: hectowatt unit.
+
+      :cvar DA_W: decawatt unit.
+
+      :cvar W: watt unit.
+
+      :cvar D_W: deciwatt unit.
+
+      :cvar C_W: centiwatt unit.
+
+      :cvar M_W_1: milliwatt unit.
+
+      :cvar W_1: microwatt unit.
+
+      :cvar N_W: nanowatt unit.
+
+      :cvar P_W_1: picowatt unit.
+
+      :cvar F_W: femtowatt unit.
+
+      :cvar A_W: attowatt unit.
+
+      :cvar Z_W_1: zeptowatt unit.
+
+      :cvar Y_W_1: yoctowatt unit.'
+  M:
+    slots:
+    - value
+    - k
+    slot_usage:
+      value: {}
+      k: {}
+  Map:
+    description: "This is a Mapping of key/value pairs.\n\n:ivar m: This is a key/value\
+      \ pair used to build up a Mapping. The\n    Element and Attribute name are kept\
+      \ to single letters to\n    minimize the length at the expense of readability\
+      \ as they are\n    likely to occur many times."
+    slots:
+    - m
+    slot_usage:
+      m:
+        multivalued: true
+        range: M
+  GenericExcitationSource:
+    description: 'The GenericExcitationSource element is used to represent a source
+      as a
+
+      collection of key/value pairs, stored in a Map.
+
+
+      The other lightsource objects should always be used in preference to
+
+      this if possible.'
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    - power
+    - power_unit
+    - map
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      power:
+        range: float
+      power_unit: {}
+      map: {}
+  LightEmittingDiode:
+    description: 'The LightEmittingDiode element is used to describe various kinds
+      of LED
+
+      lamps. As the LightEmittingDiode is inside a LightSource it already has
+
+      available the values from ManufacturerSpec (Manufacturer, Model, SerialNumber,
+
+      LotNumber) And the values from LightSource which includes Power in milliwatts
+
+      We have looked at extending this element but have had a problem producing a
+
+      generic solution.
+
+
+      Possible attributes talked about adding include:
+
+      Power in lumens - but this is complicated by multi-channel
+
+      devices like CoolLED where each channel''s power is different
+
+      Wavelength Range - not a simple value so would require
+
+      multiple attributes or a child element
+
+      Angle of Projection - this would be further affected by the
+
+      optics used for filtering the naked LED or that combine
+
+      power from multiple devices
+
+      These values are further affected if you over-drive the LED
+
+      resulting in a more complex system
+
+      Another issue is that LED''s may not be used directly for
+
+      illumination but as drivers for secondary emissions from doped
+
+      fiber optics. This would require the fiber optics to be modeled.
+
+      Thanks to Paul Goodwin of Applied Precision of information about
+
+      this topic.'
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    - power
+    - power_unit
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      power:
+        range: float
+      power_unit: {}
+  FilamentType:
+    description: An enumeration.
+  Filament:
+    description: 'The Filament element is used to describe various kinds of filament
+      bulbs
+
+      such as Incadescent or Halogen.
+
+
+      The Power of the Filament is now stored in the LightSource.
+
+
+      :ivar type_value: The type of filament.'
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    - power
+    - power_unit
+    - type_value
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      power:
+        range: float
+      power_unit: {}
+      type_value: {}
+  ArcType:
+    description: An enumeration.
+  Arc:
+    description: 'The Arc element is used to describe various kinds of Arc lamps -
+      Hg, Xe, HgXe.
+
+      The Power of the Arc is now stored in the LightSource.
+
+
+      :ivar type_value: The type of Arc lamp.'
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    - power
+    - power_unit
+    - type_value
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      power:
+        range: float
+      power_unit: {}
+      type_value: {}
+  Pump:
+    description: 'The Pump element is a reference to a LightSource.
+
+
+      It is used within the Laser element to specify the light source for
+
+      the laser''s pump (if any).'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  LaserType:
+    description: An enumeration.
+  LaserLaserMedium:
+    description: An enumeration.
+  LaserPulse:
+    description: An enumeration.
+  UnitsFrequency:
+    description: 'The units used to represent frequency.
+
+
+      :cvar YHZ: yottahertz unit.
+
+      :cvar ZHZ: zettahertz unit.
+
+      :cvar EHZ: exahertz unit.
+
+      :cvar PHZ: petahertz unit.
+
+      :cvar THZ: terahertz unit.
+
+      :cvar GHZ: gigahertz unit.
+
+      :cvar MHZ: megahertz unit.
+
+      :cvar K_HZ: kilohertz unit.
+
+      :cvar H_HZ: hectohertz unit.
+
+      :cvar DA_HZ: decahertz unit.
+
+      :cvar HZ: hertz unit.
+
+      :cvar D_HZ: decihertz unit.
+
+      :cvar C_HZ: centihertz unit.
+
+      :cvar M_HZ_1: millihertz unit.
+
+      :cvar HZ_1: microhertz unit.
+
+      :cvar N_HZ: nanohertz unit.
+
+      :cvar P_HZ_1: picohertz unit.
+
+      :cvar F_HZ: femtohertz unit.
+
+      :cvar A_HZ: attohertz unit.
+
+      :cvar Z_HZ_1: zeptohertz unit.
+
+      :cvar Y_HZ_1: yoctohertz unit.'
+  Laser:
+    description: "Laser types are specified using two attributes - the Type and the\
+      \ LaserMedium.\n\n:ivar pump: The Laser element may contain a Pump sub-element\
+      \ which\n    refers to a LightSource used as a laser pump.\n:ivar type_value:\
+      \ Type is the general category of laser.\n:ivar laser_medium: The Medium attribute\
+      \ specifies the actual lasing\n    medium for a given laser type.\n:ivar wavelength:\
+      \ The Wavelength of the laser. Units are set by\n    WavelengthUnit.\n:ivar\
+      \ wavelength_unit: The units of the Wavelength -\n    default:nanometres[nm].\n\
+      :ivar frequency_multiplication: FrequencyMultiplication that may be\n    specified.\
+      \ [units:none]\n:ivar tuneable: Whether or not the laser is Tuneable [flag]\n\
+      :ivar pulse: The Pulse mode of the laser.\n:ivar pockel_cell: If true the laser\
+      \ has a PockelCell to rotate the\n    polarization of the beam. [flag]\n:ivar\
+      \ repetition_rate: The is the rate in Hz at which the laser\n    pulses if the\
+      \ Pulse type is 'Repetitive'. hertz[Hz] Units are\n    set by RepetitionRateUnit.\n\
+      :ivar repetition_rate_unit: The units of the RepetitionRate -\n    default:hertz[Hz]."
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    - power
+    - power_unit
+    - pump
+    - type_value
+    - laser_medium
+    - wavelength
+    - wavelength_unit
+    - frequency_multiplication
+    - tuneable
+    - pulse
+    - pockel_cell
+    - repetition_rate
+    - repetition_rate_unit
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      power:
+        range: float
+      power_unit: {}
+      pump: {}
+      type_value: {}
+      laser_medium: {}
+      wavelength:
+        range: float
+      wavelength_unit: {}
+      frequency_multiplication:
+        range: integer
+      tuneable:
+        range: boolean
+      pulse: {}
+      pockel_cell:
+        range: boolean
+      repetition_rate:
+        range: float
+      repetition_rate_unit: {}
+  UnitsElectricPotential:
+    description: 'The units used to represent an electric potential.
+
+
+      :cvar YV: yottavolt unit.
+
+      :cvar ZV: zettavolt unit.
+
+      :cvar EV: exavolt unit.
+
+      :cvar PV: petavolt unit.
+
+      :cvar TV: teravolt unit.
+
+      :cvar GV: gigavolt unit.
+
+      :cvar MV: megavolt unit.
+
+      :cvar K_V: kilovolt unit.
+
+      :cvar H_V: hectovolt unit.
+
+      :cvar DA_V: decavolt unit.
+
+      :cvar V: volt unit.
+
+      :cvar D_V: decivolt unit.
+
+      :cvar C_V: centivolt unit.
+
+      :cvar M_V_1: millivolt unit.
+
+      :cvar V_1: microvolt unit.
+
+      :cvar N_V: nanovolt unit.
+
+      :cvar P_V_1: picovolt unit.
+
+      :cvar F_V: femtovolt unit.
+
+      :cvar A_V: attovolt unit.
+
+      :cvar Z_V_1: zeptovolt unit.
+
+      :cvar Y_V_1: yoctovolt unit.'
+  DetectorType:
+    description: An enumeration.
+  Detector:
+    description: "The type of detector used to capture the image.\n\nThe Detector\
+      \ ID can be used as a reference within the Channel\nelement in the Image element.\
+      \ The values stored in Detector\nrepresent the fixed values, variable values\
+      \ modified during the\nacquisition go in DetectorSettings Each attribute now\
+      \ has an\nindication of what type of detector it applies to. This is\npreparatory\
+      \ work for cleaning up and possibly splitting this object\ninto sub-types.\n\
+      \n:ivar annotation_ref:\n:ivar gain: The Detector Gain for this detector, as\
+      \ a float.\n    [units:none] {used:CCD,EMCCD,PMT}\n:ivar voltage: The Voltage\
+      \ of the detector (e.g. PMT voltage) as a\n    float. {used:PMT} Units are set\
+      \ by VoltageUnit.\n:ivar voltage_unit: The units of the Voltage - default:volts[V].\n\
+      :ivar offset: The Detector Offset. [units:none] {used:CCD,EMCCD}\n:ivar zoom:\
+      \ The fixed Zoom for a detector. [units:none] {used:PMT}\n:ivar amplification_gain:\
+      \ Gain applied to the detector signal. This\n    is the electronic gain (as\
+      \ apposed to the inherent gain) that is\n    set for the detector. [units:none]\
+      \ {used:EMCCD#EMGain}\n:ivar id:\n:ivar type_value: The Type of detector. E.g.\
+      \ CCD, PMT, EMCCD etc."
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - gain
+    - voltage
+    - voltage_unit
+    - offset
+    - zoom
+    - amplification_gain
+    - id
+    - type_value
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      gain:
+        range: float
+      voltage:
+        range: float
+      voltage_unit: {}
+      offset:
+        range: float
+      zoom:
+        range: float
+      amplification_gain:
+        range: float
+      id: {}
+      type_value: {}
+  ObjectiveCorrection:
+    description: An enumeration.
+  ObjectiveImmersion:
+    description: An enumeration.
+  Objective:
+    description: "A description of the microscope's objective lens.\n\nRequired elements\
+      \ include the lens numerical aperture,\nand the magnification, both of which\
+      \ a floating\npoint (real) numbers.\nThe values are those that are fixed for\
+      \ a particular\nobjective: either because it has been manufactured to\nthis\
+      \ specification or the value has been measured on\nthis particular objective.\n\
+      Correction: This is the type of correction coating applied to this lens.\nImmersion:\
+      \ This is the types of immersion medium the lens is designed to\nwork with.\
+      \ It is not the same as 'Medium' in ObjectiveRef (a\nsingle type) as here Immersion\
+      \ can have compound values like 'Multi'.\nLensNA: The numerical aperture of\
+      \ the lens (as a float)\nNominalMagnification: The specified magnification e.g.\
+      \ x10\nCalibratedMagnification: The measured magnification e.g. x10.3\nWorkingDistance:\
+      \ WorkingDistance of the lens.\n\n:ivar annotation_ref:\n:ivar id:\n:ivar correction:\
+      \ The correction applied to the lens\n:ivar immersion: The immersion medium\
+      \ the lens is designed for\n:ivar lens_na: The numerical aperture of the lens\
+      \ expressed as a\n    floating point (real) number. Expected range 0.02 - 1.5\n\
+      \    [units:none]\n:ivar nominal_magnification: The magnification of the lens\
+      \ as\n    specified by the manufacturer - i.e. '60' is a 60X lens.\n    [units:none]\
+      \ Note: The type of this has been changed from int to\n    float to allow the\
+      \ specification of additional lenses e.g. 0.5X\n    lens\n:ivar calibrated_magnification:\
+      \ The magnification of the lens as\n    measured by a calibration process- i.e.\
+      \ '59.987' for a 60X lens.\n    [units:none]\n:ivar working_distance: The working\
+      \ distance of the lens expressed\n    as a floating point (real) number. Units\
+      \ are set by\n    WorkingDistanceUnit.\n:ivar working_distance_unit: The units\
+      \ of the working distance -\n    default:microns[\xB5m].\n:ivar iris: Records\
+      \ whether or not the objective was fitted with an\n    Iris. [flag]"
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    - correction
+    - immersion
+    - lens_na
+    - nominal_magnification
+    - calibrated_magnification
+    - working_distance
+    - working_distance_unit
+    - iris
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      correction: {}
+      immersion: {}
+      lens_na:
+        range: float
+      nominal_magnification:
+        range: float
+      calibrated_magnification:
+        range: float
+      working_distance:
+        range: float
+      working_distance_unit: {}
+      iris:
+        range: boolean
+  FilterRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  DichroicRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  FilterSet:
+    description: "Filter set manufacturer specification.\n\n:ivar excitation_filter_ref:\
+      \ The Filters placed in the Excitation\n    light path.\n:ivar dichroic_ref:\n\
+      :ivar emission_filter_ref: The Filters placed in the Emission light\n    path.\n\
+      :ivar id:"
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - excitation_filter_ref
+    - dichroic_ref
+    - emission_filter_ref
+    - id
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      excitation_filter_ref:
+        multivalued: true
+        range: FilterRef
+      dichroic_ref: {}
+      emission_filter_ref:
+        multivalued: true
+        range: FilterRef
+      id: {}
+  TransmittanceRange:
+    description: "This records the range of wavelengths that are transmitted by the\
+      \ filter.\n\nIt also records the maximum amount of light transmitted.\n\n:ivar\
+      \ cut_in: CutIn is the wavelength below which there is less than\n    50% transmittance\
+      \ for a filter. Units are set by CutInUnit.\n:ivar cut_in_unit: The units of\
+      \ the CutIn - default:nanometres[nm].\n:ivar cut_out: CutOut is the wavelength\
+      \ above which there is less\n    than 50% transmittance for a filter. Units\
+      \ are set by\n    CutOutUnit.\n:ivar cut_out_unit: The units of the CutOut -\n\
+      \    default:nanometres[nm].\n:ivar cut_in_tolerance: CutInTolerance. Units\
+      \ are set by\n    CutInToleranceUnit.\n:ivar cut_in_tolerance_unit: The units\
+      \ of the CutInTolerance -\n    default:nanometres[nm].\n:ivar cut_out_tolerance:\
+      \ CutOutTolerance. Units are set by\n    CutOutToleranceUnit.\n:ivar cut_out_tolerance_unit:\
+      \ The units of the CutOutTolerance -\n    default:nanometres[nm].\n:ivar transmittance:\
+      \ The amount of light the filter transmits at a\n    maximum [units:none] A\
+      \ fraction, as a value from 0.0 to 1.0."
+    slots:
+    - cut_in
+    - cut_in_unit
+    - cut_out
+    - cut_out_unit
+    - cut_in_tolerance
+    - cut_in_tolerance_unit
+    - cut_out_tolerance
+    - cut_out_tolerance_unit
+    - transmittance
+    slot_usage:
+      cut_in:
+        range: float
+      cut_in_unit: {}
+      cut_out:
+        range: float
+      cut_out_unit: {}
+      cut_in_tolerance:
+        range: float
+      cut_in_tolerance_unit: {}
+      cut_out_tolerance:
+        range: float
+      cut_out_tolerance_unit: {}
+      transmittance:
+        range: float
+  FilterType:
+    description: An enumeration.
+  Filter:
+    description: "A filter is either an excitation or emission filters. There should\
+      \ be one\nfilter element specified per wavelength in the image. The channel\
+      \ number\nassociated with a filter set is specified in Channel. It is based\
+      \ on the\nFilterSpec type, so has the required attributes Manufacturer, Model,\
+      \ and\nLotNumber. It may also contain a Type attribute which may be set to 'LongPass',\n\
+      'ShortPass', 'BandPass', 'MultiPass',\n\n'Dichroic', 'NeutralDensity', 'Tuneable'\
+      \ or 'Other'.\nIt can be associated with an optional FilterWheel - Note: this\
+      \ is not the same as a FilterSet\n\n:ivar transmittance_range:\n:ivar annotation_ref:\n\
+      :ivar type_value:\n:ivar filter_wheel: A filter 'wheel' in OME can refer to\
+      \ any\n    arrangement of filters in a filter holder of any shape. It\n    could,\
+      \ for example, be a filter slider. [plain text string]\n:ivar id:"
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - transmittance_range
+    - annotation_ref
+    - type_value
+    - filter_wheel
+    - id
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      transmittance_range: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      type_value: {}
+      filter_wheel: {}
+      id: {}
+  Dichroic:
+    description: 'The dichromatic beamsplitter or dichroic mirror used for this filter
+
+      combination.'
+    slots:
+    - manufacturer
+    - model
+    - serial_number
+    - lot_number
+    - annotation_ref
+    - id
+    slot_usage:
+      manufacturer: {}
+      model: {}
+      serial_number: {}
+      lot_number: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  Instrument:
+    description: 'This element describes the instrument used to capture the Image.
+
+
+      It is primarily a container for manufacturer''s model and catalog
+
+      numbers for the Microscope, LightSource, Detector, Objective and
+
+      Filters components. The Objective element contains the additional
+
+      elements LensNA and Magnification. The Filters element can be
+
+      composed either of separate excitation, emission filters and a
+
+      dichroic mirror or a single filter set. Within the Image itself, a
+
+      reference is made to this one Filter element. There may be multiple
+
+      light sources, detectors, objectives and filters on a microscope.
+
+      Each of these has their own ID attribute, which can be referred to
+
+      from Channel. It is understood that the light path configuration can
+
+      be different for each channel, but cannot be different for each
+
+      timepoint or each plane of an XYZ stack.'
+    slots:
+    - microscope
+    - generic_excitation_source
+    - light_emitting_diode
+    - filament
+    - arc
+    - laser
+    - detector
+    - objective
+    - filter_set
+    - filter
+    - dichroic
+    - annotation_ref
+    - id
+    slot_usage:
+      microscope: {}
+      generic_excitation_source:
+        multivalued: true
+        range: GenericExcitationSource
+      light_emitting_diode:
+        multivalued: true
+        range: LightEmittingDiode
+      filament:
+        multivalued: true
+        range: Filament
+      arc:
+        multivalued: true
+        range: Arc
+      laser:
+        multivalued: true
+        range: Laser
+      detector:
+        multivalued: true
+        range: Detector
+      objective:
+        multivalued: true
+        range: Objective
+      filter_set:
+        multivalued: true
+        range: FilterSet
+      filter:
+        multivalued: true
+        range: Filter
+      dichroic:
+        multivalued: true
+        range: Dichroic
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  ExperimentRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  InstrumentRef:
+    description: 'This empty element can be used (via the required Instrument ID attribute)
+      to
+
+      refer to an Instrument defined within OME.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  ObjectiveSettingsMedium:
+    description: 'A description of a Medium used for the lens.
+
+
+      The Medium is the actual immersion medium used in this case.'
+  ObjectiveSettings:
+    description: "This holds the setting applied to an objective as well as a reference\
+      \ to the\nobjective.\n\nThe ID is the objective used in this case.\n\n:ivar\
+      \ id:\n:ivar correction_collar: The CorrectionCollar is normally an\n    adjustable\
+      \ ring on the objective. Each has an arbitrary scale on\n    it so the values\
+      \ is unit-less. [units:none]\n:ivar medium:\n:ivar refractive_index: The RefractiveIndex\
+      \ is that of the immersion\n    medium. This is a ratio so it also unit-less.\
+      \ [units:none]"
+    slots:
+    - id
+    - correction_collar
+    - medium
+    - refractive_index
+    slot_usage:
+      id: {}
+      correction_collar:
+        range: float
+      medium: {}
+      refractive_index:
+        range: float
+  UnitsTemperature:
+    description: 'The units used to represent a temperature.
+
+
+      :cvar C: degree Celsius unit.
+
+      :cvar F: degree Fahrenheit unit.
+
+      :cvar K: Kelvin unit.
+
+      :cvar R: degree Rankine unit.'
+  UnitsPressure:
+    description: "The units used to represent a pressure.\n\n:cvar YPA: yottapascal\
+      \ SI unit.\n:cvar ZPA: zettapascal SI unit.\n:cvar EPA: exapascal SI unit.\n\
+      :cvar PPA: petapascal SI unit.\n:cvar TPA: terapascal SI unit.\n:cvar GPA: gigapascal\
+      \ SI unit.\n:cvar MPA: megapascal SI unit.\n:cvar K_PA: kilopascal SI unit.\n\
+      :cvar H_PA: hectopascal SI unit.\n:cvar DA_PA: decapascal SI unit.\n:cvar PA:\
+      \ pascal SI unit.  Note the C++ enum is mixed case due to\n    PASCAL being\
+      \ a macro used by the Microsoft C and C++ compiler.\n:cvar D_PA: decipascal\
+      \ SI unit.\n:cvar C_PA: centipascal SI unit.\n:cvar M_PA_1: millipascal SI unit.\n\
+      :cvar PA_1: micropascal SI unit.\n:cvar N_PA: nanopascal SI unit.\n:cvar P_PA_1:\
+      \ picopascal SI unit.\n:cvar F_PA: femtopascal SI unit.\n:cvar A_PA: attopascal\
+      \ SI unit.\n:cvar Z_PA_1: zeptopascal SI unit.\n:cvar Y_PA_1: yoctopascal SI\
+      \ unit.\n:cvar BAR: bar SI-derived unit.\n:cvar MBAR: megabar SI-derived unit.\n\
+      :cvar KBAR: kilobar SI-derived unit.\n:cvar DBAR: decibar SI-derived unit.\n\
+      :cvar CBAR: centibar SI-derived unit.\n:cvar MBAR_1: millibar SI-derived unit.\n\
+      :cvar ATM: standard atmosphere SI-derived unit.\n:cvar PSI: pound-force per\
+      \ square inch Imperial unit.\n:cvar TORR: torr SI-derived unit.\n:cvar M_TORR:\
+      \ millitorr SI-derived unit.\n:cvar MM_HG: millimetre of mercury SI-derived\
+      \ unit"
+  ImagingEnvironment:
+    description: "This describes the environment that the biological sample was in\
+      \ during the\nexperiment.\n\n:ivar map:\n:ivar temperature: The Temperature\
+      \ is the define units.\n:ivar temperature_unit: The units the Temperature is\
+      \ in -\n    default:Celsius[\xB0C].\n:ivar air_pressure: AirPressure is the\
+      \ define units.\n:ivar air_pressure_unit: The units the AirPressure is in -\n\
+      \    default:millibars[mbar].\n:ivar humidity: Humidity around the sample [units:none]\
+      \ A fraction,\n    as a value from 0.0 to 1.0.\n:ivar co2_percent: Carbon Dioxide\
+      \ concentration around the sample\n    [units:none] A fraction, as a value from\
+      \ 0.0 to 1.0."
+    slots:
+    - map
+    - temperature
+    - temperature_unit
+    - air_pressure
+    - air_pressure_unit
+    - humidity
+    - co2_percent
+    slot_usage:
+      map: {}
+      temperature:
+        range: float
+      temperature_unit: {}
+      air_pressure:
+        range: float
+      air_pressure_unit: {}
+      humidity:
+        range: float
+      co2_percent:
+        range: float
+  StageLabel:
+    description: "The StageLabel is used to specify a name and position for a stage\
+      \ position in\nthe microscope's reference frame.\n\n:ivar name:\n:ivar x: The\
+      \ X position of the stage label. Units are set by XUnit.\n:ivar xunit: The units\
+      \ of the X stage position - default:[reference\n    frame].\n:ivar y: The Y\
+      \ position of the stage label. Units are set by YUnit.\n:ivar yunit: The units\
+      \ of the Y stage position - default:[reference\n    frame].\n:ivar z: The Z\
+      \ position of the stage label. Units are set by ZUnit.\n:ivar zunit: The units\
+      \ of the Z  stage position - default:[reference\n    frame]."
+    slots:
+    - name
+    - x
+    - xunit
+    - y
+    - yunit
+    - z
+    - zunit
+    slot_usage:
+      x:
+        range: float
+      xunit: {}
+      y:
+        range: float
+      yunit: {}
+      z:
+        range: float
+      zunit: {}
+  Binning:
+    description: "Represents the number of pixels that are combined to form larger\
+      \ pixels.\n\n{used:CCD,EMCCD}\n\n:cvar VALUE_1X1: No binning.\n:cvar VALUE_2X2:\
+      \ 2\xD72 binning.\n:cvar VALUE_4X4: 4\xD74 binning.\n:cvar VALUE_8X8: 8\xD7\
+      8 binning.\n:cvar OTHER: Other binning value."
+  DetectorSettings:
+    description: "This holds the setting applied to a detector as well as a reference\
+      \ to the\ndetector.\n\nThe ID is the detector used in this case. The values\
+      \ stored in\nDetectorSettings represent the variable values, fixed values not\n\
+      modified during the acquisition go in Detector. Each attribute now\nhas an indication\
+      \ of what type of detector it applies to. This is\npreparatory work for cleaning\
+      \ up and possibly splitting this object\ninto sub-types.\n\n:ivar id:\n:ivar\
+      \ offset: The Offset of the detector. [units none]\n    {used:CCD,EMCCD}\n:ivar\
+      \ gain: The Gain of the detector. [units:none]\n    {used:CCD,EMCCD,PMT}\n:ivar\
+      \ voltage: The Voltage of the detector. {used:PMT} Units are set\n    by VoltageUnit.\n\
+      :ivar voltage_unit: The units of the Voltage of the detector -\n    default:volts[V]\n\
+      :ivar zoom: The Zoom or \"Confocal Zoom\" or \"Scan Zoom\" for a\n    detector.\
+      \ [units:none] {used:PMT}\n:ivar read_out_rate: The speed at which the detector\
+      \ can count\n    pixels.  {used:CCD,EMCCD} This is the bytes per second that\
+      \ can\n    be read from the detector (like a baud rate). Units are set by\n\
+      \    ReadOutRateUnit.\n:ivar read_out_rate_unit: The units of the ReadOutRate\
+      \ -\n    default:megahertz[Hz].\n:ivar binning: Represents the number of pixels\
+      \ that are combined to\n    form larger pixels. {used:CCD,EMCCD}\n:ivar integration:\
+      \ This is the number of sequential frames that get\n    averaged, to improve\
+      \ the signal-to-noise ratio. [units:none]\n    {used:CCD,EMCCD}"
+    slots:
+    - id
+    - offset
+    - gain
+    - voltage
+    - voltage_unit
+    - zoom
+    - read_out_rate
+    - read_out_rate_unit
+    - binning
+    - integration
+    slot_usage:
+      id: {}
+      offset:
+        range: float
+      gain:
+        range: float
+      voltage:
+        range: float
+      voltage_unit: {}
+      zoom:
+        range: float
+      read_out_rate:
+        range: float
+      read_out_rate_unit: {}
+      binning: {}
+      integration:
+        range: integer
+  FilterSetRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  LightPath:
+    description: "A description of the light path.\n\n:ivar excitation_filter_ref:\
+      \ The Filters placed in the Excitation\n    light path.\n:ivar dichroic_ref:\n\
+      :ivar emission_filter_ref: The Filters placed in the Emission light\n    path.\n\
+      :ivar annotation_ref:"
+    slots:
+    - excitation_filter_ref
+    - dichroic_ref
+    - emission_filter_ref
+    - annotation_ref
+    slot_usage:
+      excitation_filter_ref:
+        multivalued: true
+        range: FilterRef
+      dichroic_ref: {}
+      emission_filter_ref:
+        multivalued: true
+        range: FilterRef
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+  ChannelIlluminationType:
+    description: An enumeration.
+  ChannelAcquisitionMode:
+    description: An enumeration.
+  ChannelContrastMethod:
+    description: An enumeration.
+  Channel:
+    description: "There must be one per channel in the Image, even for a single-plane\
+      \ image.\nAnd information about how each of them was acquired is stored in the\
+      \ various\noptional *Ref elements.  Each Logical Channel is composed of one\
+      \ or more\nChannelComponents.  For example, an entire spectrum in an FTIR experiment\
+      \ may\nbe stored in a single Logical Channel with each discrete wavenumber of\
+      \ the\nspectrum.\n\nconstituting a ChannelComponent of the FTIR Logical Channel.\
+      \  An RGB image where the Red, Green and Blue components do not reflect discrete\
+      \ probes but are\ninstead the output of a color camera would be treated similarly\
+      \ - one Logical channel with three ChannelComponents in this case.\nThe total\
+      \ number of ChannelComponents for a set of pixels must equal SizeC.\nThe IlluminationType\
+      \ attribute is a string enumeration which may be set to 'Transmitted', 'Epifluorescence',\
+      \ 'Oblique', or 'NonLinear'.\nThe user interface logic for labeling a given\
+      \ channel for the user should use the first existing attribute in the following\
+      \ sequence:\nName -&gt; Fluor -&gt; EmissionWavelength -&gt; ChannelComponent/Index.\n\
+      \n:ivar light_source_settings:\n:ivar detector_settings:\n:ivar filter_set_ref:\n\
+      :ivar annotation_ref:\n:ivar light_path:\n:ivar id:\n:ivar name: A name for\
+      \ the channel that is suitable for presentation\n    to the user.\n:ivar samples_per_pixel:\
+      \ The number of samples the detector takes to\n    form each pixel value. [units:none]\
+      \ Note: This is not the same\n    as \"Frame Averaging\" - see Integration in\
+      \ DetectorSettings\n:ivar illumination_type: The method of illumination used\
+      \ to capture\n    the channel.\n:ivar pinhole_size: The optional PinholeSize\
+      \ attribute allows\n    specifying adjustable pin hole diameters for confocal\n\
+      \    microscopes. Units are set by PinholeSizeUnit.\n:ivar pinhole_size_unit:\
+      \ The units of the pin hole diameter for\n    confocal microscopes - default:microns[\xB5\
+      m].\n:ivar acquisition_mode: AcquisitionMode describes the type of\n    microscopy\
+      \ performed for each channel\n:ivar contrast_method: ContrastMethod describes\
+      \ the technique used\n    to achieve contrast for each channel\n:ivar excitation_wavelength:\
+      \ Wavelength of excitation for a\n    particular channel. Units are set by ExcitationWavelengthUnit.\n\
+      :ivar excitation_wavelength_unit: The units of the wavelength of\n    excitation\
+      \ - default:nanometres[nm].\n:ivar emission_wavelength: Wavelength of emission\
+      \ for a particular\n    channel. Units are set by EmissionWavelengthUnit.\n\
+      :ivar emission_wavelength_unit: The units of the wavelength of\n    emission\
+      \ - default:nanometres[nm].\n:ivar fluor: The Fluor attribute is used for fluorescence\
+      \ images.\n    This is the name of the fluorophore used to produce this channel\n\
+      \    [plain text string]\n:ivar ndfilter: The NDfilter attribute is used to\
+      \ specify the\n    combined effect of any neutral density filters used. The\
+      \ amount\n    of light the filter transmits at a maximum [units:none] A\n  \
+      \  fraction, as a value from 0.0 to 1.0. NOTE: This was formerly\n    described\
+      \ as \"units optical density expressed as a\n    PercentFraction\". This was\
+      \ how the field had been described in\n    the schema from the beginning but\
+      \ all the use of it has been in\n    the opposite direction, i.e. as a amount\
+      \ transmitted, not the\n    amount blocked. This change has been made to make\
+      \ the model\n    reflect this usage.\n:ivar pockel_cell_setting: The PockelCellSetting\
+      \ used for this\n    channel. This is the amount the polarization of the beam\
+      \ is\n    rotated by. [units:none]\n:ivar color: A color used to render this\
+      \ channel - encoded as RGBA\n    The default value \"-1\" is #FFFFFFFF so solid\
+      \ white (it is a\n    signed 32 bit value) NOTE: Prior to the 2012-06 schema\
+      \ the\n    default value was incorrect and produced a transparent red not\n\
+      \    solid white."
+    slots:
+    - light_source_settings
+    - detector_settings
+    - filter_set_ref
+    - annotation_ref
+    - light_path
+    - id
+    - name
+    - samples_per_pixel
+    - illumination_type
+    - pinhole_size
+    - pinhole_size_unit
+    - acquisition_mode
+    - contrast_method
+    - excitation_wavelength
+    - excitation_wavelength_unit
+    - emission_wavelength
+    - emission_wavelength_unit
+    - fluor
+    - ndfilter
+    - pockel_cell_setting
+    - color
+    slot_usage:
+      light_source_settings: {}
+      detector_settings: {}
+      filter_set_ref: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      light_path: {}
+      id: {}
+      samples_per_pixel:
+        range: integer
+      illumination_type: {}
+      pinhole_size:
+        range: float
+      pinhole_size_unit: {}
+      acquisition_mode: {}
+      contrast_method: {}
+      excitation_wavelength:
+        range: float
+      excitation_wavelength_unit: {}
+      emission_wavelength:
+        range: float
+      emission_wavelength_unit: {}
+      fluor: {}
+      ndfilter:
+        range: float
+      pockel_cell_setting:
+        range: integer
+      color:
+        range: integer
+  BinDataCompression:
+    description: An enumeration.
+  BinData:
+    description: "The contents of this element are base64-encoded.\n\nThese are not\
+      \ CDATA sections, just a base64 stream.\n\n:ivar value:\n:ivar compression:\
+      \ Specifies the compression scheme used to encode\n    the data.\n:ivar big_endian:\
+      \ This is true if the binary data was written in\n    BigEndian order. This\
+      \ is dependent on the system architecture of\n    the machine that wrote the\
+      \ pixels. True for essentially all\n    modern CPUs other than Intel and Alpha.\
+      \ All Binary data must be\n    written in the same endian order.\n:ivar length:\
+      \ Character count attribute for the BinData field. This\n    is the length of\
+      \ the base-64 encoded block. It allows easy\n    skipping of the block when\
+      \ parsing the file. [unit:bytes]"
+    slots:
+    - value
+    - compression
+    - big_endian
+    - length
+    slot_usage:
+      value: {}
+      compression: {}
+      big_endian:
+        range: boolean
+      length:
+        range: integer
+  Uuid:
+    description: ":ivar value:\n:ivar file_name: This can be used when the IFDs are\
+      \ located in\n    another file. The / (forward slash) is used as the path\n\
+      \    separator. A relative path is recommended. However an\n    absolute path\
+      \ can be specified. Default is to use the file\n    the ome-xml data has been\
+      \ pulled from. Note: It is\n    permissible for this to be self referential.\
+      \ The file\n    image1.tiff may contain ome-xml data that has\n    FilePath=\"\
+      image1.tiff\" or \"./image1.tiff\""
+    slots:
+    - value
+    - file_name
+    slot_usage:
+      value: {}
+      file_name: {}
+  TiffData:
+    description: "This described the location of the pixel data in a tiff file.\n\n\
+      :ivar uuid: This must be used when the IFDs are located in another\n    file.\
+      \ Note: It is permissible for this to be self referential.\n:ivar ifd: Gives\
+      \ the IFD(s) for which this element is applicable.\n    Indexed from 0. Default\
+      \ is 0 (the first IFD). [units:none]\n:ivar first_z: Gives the Z position of\
+      \ the image plane at the\n    specified IFD. Indexed from 0. Default is 0 (the\
+      \ first Z\n    position). [units:none]\n:ivar first_t: Gives the T position\
+      \ of the image plane at the\n    specified IFD. Indexed from 0. Default is 0\
+      \ (the first T\n    position). [units:none]\n:ivar first_c: Gives the C position\
+      \ of the image plane at the\n    specified IFD. Indexed from 0. Default is 0\
+      \ (the first C\n    position). [units:none]\n:ivar plane_count: Gives the number\
+      \ of IFDs affected. Dimension\n    order of IFDs is given by the enclosing Pixels\
+      \ element's\n    DimensionOrder attribute. Default is the number of IFDs in\
+      \ the\n    TIFF file, unless an IFD is specified, in which case the default\n\
+      \    is 1. [units:none]"
+    slots:
+    - uuid
+    - ifd
+    - first_z
+    - first_t
+    - first_c
+    - plane_count
+    slot_usage:
+      uuid: {}
+      ifd:
+        range: integer
+      first_z:
+        range: integer
+      first_t:
+        range: integer
+      first_c:
+        range: integer
+      plane_count:
+        range: integer
+  MetadataOnly:
+    description: This place holder means there is on pixel data in this file.
+  UnitsTime:
+    description: 'The units used to represent a time interval.
+
+
+      :cvar YS: yottasecond SI unit.
+
+      :cvar ZS: zettasecond SI unit.
+
+      :cvar ES: exasecond SI unit.
+
+      :cvar PS: petasecond SI unit.
+
+      :cvar TS: terasecond SI unit.
+
+      :cvar GS: gigasecond SI unit.
+
+      :cvar MS: megasecond SI unit.
+
+      :cvar KS: kilosecond SI unit.
+
+      :cvar HS: hectosecond SI unit.
+
+      :cvar DAS: decasecond SI unit.
+
+      :cvar S: second SI unit.
+
+      :cvar DS: decisecond SI unit.
+
+      :cvar CS: centisecond SI unit.
+
+      :cvar MS_1: millisecond SI unit.
+
+      :cvar S_1: microsecond SI unit.
+
+      :cvar NS: nanosecond SI unit.
+
+      :cvar PS_1: picosecond SI unit.
+
+      :cvar FS: femtosecond SI unit.
+
+      :cvar AS: attosecond SI unit.
+
+      :cvar ZS_1: zeptosecond SI unit.
+
+      :cvar YS_1: yoctosecond SI unit.
+
+      :cvar MIN: minute SI-derived unit.
+
+      :cvar H: hour SI-derived unit.
+
+      :cvar D: day SI-derived unit.'
+  Plane:
+    description: "The Plane object holds microscope stage and image timing data for\
+      \ a given\nchannel/z-section/timepoint.\n\n:ivar hash_sha1:\n:ivar annotation_ref:\n\
+      :ivar the_z: The Z-section this plane is for. [units:none] This is\n    numbered\
+      \ from 0.\n:ivar the_t: The timepoint this plane is for. [units:none] This is\n\
+      \    numbered from 0.\n:ivar the_c: The channel this plane is for. [units:none]\
+      \ This is\n    numbered from 0.\n:ivar delta_t: Time since the beginning of\
+      \ the experiment. Units are\n    set by DeltaTUnit.\n:ivar delta_tunit: The\
+      \ units of the DeltaT - default:seconds[s].\n:ivar exposure_time: The length\
+      \ of the exposure. Units are set by\n    ExposureTimeUnit.\n:ivar exposure_time_unit:\
+      \ The units of the ExposureTime -\n    default:seconds[s].\n:ivar position_x:\
+      \ The X position of the stage. Units are set by\n    PositionXUnit.\n:ivar position_xunit:\
+      \ The units of the X stage position -\n    default:[reference frame].\n:ivar\
+      \ position_y: The Y position of the stage. Units are set by\n    PositionYUnit.\n\
+      :ivar position_yunit: The units of the Y stage position -\n    default:[reference\
+      \ frame].\n:ivar position_z: The Z position of the stage. Units are set by\n\
+      \    PositionZUnit.\n:ivar position_zunit: The units of the Z stage position\
+      \ -\n    default:[reference frame]."
+    slots:
+    - hash_sha1
+    - annotation_ref
+    - the_z
+    - the_t
+    - the_c
+    - delta_t
+    - delta_tunit
+    - exposure_time
+    - exposure_time_unit
+    - position_x
+    - position_xunit
+    - position_y
+    - position_yunit
+    - position_z
+    - position_zunit
+    slot_usage:
+      hash_sha1: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      delta_t:
+        range: float
+      delta_tunit: {}
+      exposure_time:
+        range: float
+      exposure_time_unit: {}
+      position_x:
+        range: float
+      position_xunit: {}
+      position_y:
+        range: float
+      position_yunit: {}
+      position_z:
+        range: float
+      position_zunit: {}
+  PixelsDimensionOrder:
+    description: An enumeration.
+  PixelType:
+    description: 'The number size/kind used to represent a pixel.
+
+
+      :cvar INT8: 8 bit signed integer.
+
+      :cvar INT16: 16 bit signed integer.
+
+      :cvar INT32: 32 bit signed integer.
+
+      :cvar UINT8: 8 bit unsigned integer.
+
+      :cvar UINT16: 16 bit unsigned integer.
+
+      :cvar UINT32: 32 bit unsigned integer.
+
+      :cvar FLOAT: single-precision floating point.
+
+      :cvar DOUBLE: double-precision floating point.
+
+      :cvar COMPLEX: complex single-precision floating point.
+
+      :cvar DOUBLE_COMPLEX: complex double-precision floating point.
+
+      :cvar BIT: bit mask.'
+  Pixels:
+    description: "Pixels is going to be removed in the future, but it is still required.\n\
+      \nThis is just notice that the contents of Pixels will be moved up to\nImage\
+      \ in a future release. This is because there has only been 1\nPixels object\
+      \ in each Image for some time. The concept of multiple\nPixels sets for one\
+      \ Image failed to take off. It is therefore\nredundant. The Image will be unreadable\
+      \ if any of the required Pixel\nattributes are missing. The Pixels themselves\
+      \ can be stored within\nthe OME-XML compressed by plane, and encoded in Base64.\
+      \ Or the\nPixels may be stored in TIFF format. The Pixels element should\ncontain\
+      \ a list of BinData or TiffData, each containing a single\nplane of pixels.\
+      \ These Pixels elements, when read in document order,\nmust produce a 5-D pixel\
+      \ array of the size specified in this\nelement, and in the dimension order specified\
+      \ by 'DimensionOrder'.\nAll of the values in the Pixels object when present\
+      \ should match the\nsame value stored in any associated TIFF format (e.g. SizeX\
+      \ should\nbe the same). Where there is a mismatch our readers will take the\n\
+      value from the TIFF structure as overriding the value in the OME-\nXML. This\
+      \ is simply a pragmatic decision as it increases the\nlikelihood of reading\
+      \ data from a slightly incorrect file.\n\n:ivar channel:\n:ivar bin_data:\n\
+      :ivar tiff_data:\n:ivar metadata_only:\n:ivar plane:\n:ivar id:\n:ivar dimension_order:\
+      \ The order in which the individual planes of\n    data are interleaved.\n:ivar\
+      \ type_value: The variable type used to represent each pixel in\n    the image.\n\
+      :ivar significant_bits: The number of bits within the type storing\n    each\
+      \ pixel that are significant. e.g. you can store 12 bit data\n    within a 16\
+      \ bit type. This does not reduce the storage\n    requirements but can be a\
+      \ useful indicator when processing or\n    viewing the image data.\n:ivar interleaved:\
+      \ How the channels are arranged within the data\n    block: true if channels\
+      \ are stored RGBRGBRGB...; false if\n    channels are stored RRR...GGG...BBB...\n\
+      :ivar big_endian: This is true if the pixels data was written in\n    BigEndian\
+      \ order. If this value is present it should match the\n    value used in BinData\
+      \ or TiffData. If it does not a reader\n    should honour the value used in\
+      \ the BinData or TiffData. This\n    values is useful for MetadataOnly files\
+      \ and is to allow for\n    future storage solutions.\n:ivar size_x: Dimensional\
+      \ size of pixel data array [units:none]\n:ivar size_y: Dimensional size of pixel\
+      \ data array [units:none]\n:ivar size_z: Dimensional size of pixel data array\
+      \ [units:none]\n:ivar size_c: Dimensional size of pixel data array [units:none]\n\
+      :ivar size_t: Dimensional size of pixel data array [units:none]\n:ivar physical_size_x:\
+      \ Physical size of a pixel. Units are set by\n    PhysicalSizeXUnit.\n:ivar\
+      \ physical_size_xunit: The units of the physical size of a pixel\n    - default:microns[\xB5\
+      m].\n:ivar physical_size_y: Physical size of a pixel. Units are set by\n   \
+      \ PhysicalSizeYUnit.\n:ivar physical_size_yunit: The units of the physical size\
+      \ of a pixel\n    - default:microns[\xB5m].\n:ivar physical_size_z: Physical\
+      \ size of a pixel. Units are set by\n    PhysicalSizeZUnit.\n:ivar physical_size_zunit:\
+      \ The units of the physical size of a pixel\n    - default:microns[\xB5m].\n\
+      :ivar time_increment: TimeIncrement is used for time series that\n    have a\
+      \ global timing specification instead of per-timepoint\n    timing info. For\
+      \ example in a video stream. Units are set by\n    TimeIncrementUnit.\n:ivar\
+      \ time_increment_unit: The units of the TimeIncrement -\n    default:seconds[s]."
+    slots:
+    - channel
+    - bin_data
+    - tiff_data
+    - metadata_only
+    - plane
+    - id
+    - dimension_order
+    - type_value
+    - significant_bits
+    - interleaved
+    - big_endian
+    - size_x
+    - size_y
+    - size_z
+    - size_c
+    - size_t
+    - physical_size_x
+    - physical_size_xunit
+    - physical_size_y
+    - physical_size_yunit
+    - physical_size_z
+    - physical_size_zunit
+    - time_increment
+    - time_increment_unit
+    slot_usage:
+      channel:
+        multivalued: true
+        range: Channel
+      bin_data:
+        multivalued: true
+        range: BinData
+      tiff_data:
+        multivalued: true
+        range: TiffData
+      metadata_only: {}
+      plane:
+        multivalued: true
+        range: Plane
+      id: {}
+      dimension_order: {}
+      type_value: {}
+      significant_bits:
+        range: integer
+      interleaved:
+        range: boolean
+      big_endian:
+        range: boolean
+      size_x:
+        range: integer
+      size_y:
+        range: integer
+      size_z:
+        range: integer
+      size_c:
+        range: integer
+      size_t:
+        range: integer
+      physical_size_x:
+        range: float
+      physical_size_xunit: {}
+      physical_size_y:
+        range: float
+      physical_size_yunit: {}
+      physical_size_z:
+        range: float
+      physical_size_zunit: {}
+      time_increment:
+        range: float
+      time_increment_unit: {}
+  MicrobeamManipulationRef:
+    description: 'Reference is an empty complex type that is contained and extended
+      by all the
+
+      *Ref elements and also the Settings Complex Type Each *Ref element defines an
+
+      attribute named ID of simple type *ID and no other information Each simple type
+
+      *ID is restricted to the base type LSID with an appropriate pattern.'
+    slots:
+    - id
+    slot_usage:
+      id: {}
+  Image:
+    description: "This element describes the actual image and its meta-data.\n\nThe\
+      \ elements that are references (ending in Ref or Settings) refer\nto elements\
+      \ defined outside of the Image element. Ref elements are\nsimple links, while\
+      \ Settings elements are links with additional\nvalues. If any of the required\
+      \ Image attributes or elements are\nmissing, its guaranteed to be an invalid\
+      \ document. The required\nattributes and elements are ID and Pixels. ExperimenterRef\
+      \ is\nrequired for all Images with well formed LSIDs. ImageType is a\nvendor-specific\
+      \ designation of the type of image this is. Examples\nof ImageType include 'STK',\
+      \ 'SoftWorx', etc. The Name attributes are\nin all cases the name of the element\
+      \ instance. In this case, the\nname of the image, not necessarily the filename.\
+      \ Physical size of\npixels are microns[\xB5m].\n\n:ivar acquisition_date: The\
+      \ acquisition date of the Image. The\n    element contains an xsd:dateTime string\
+      \ based on the ISO 8601\n    format (i.e. 1988-04-07T18:39:09.359) YYYY-MM-DDTHH:mm:SS.sssZ\
+      \ Y\n    - Year M - Month D - Day H - Hour m - minutes S - Seconds s -\n   \
+      \ sub-seconds (optional) Z - Zone (optional) +HH:mm or -HH:mm or Z\n    for\
+      \ UTC Note: xsd:dataTime supports a very wide date range with\n    unlimited\
+      \ precision. The full date range and precision are not\n    typically supported\
+      \ by platform- and language-specific\n    libraries. Where the supported time\
+      \ precision is less than the\n    precision used by the xsd:dateTime timestamp\
+      \ there will be loss\n    of precision; this will typically occur via direct\
+      \ truncation or\n    (less commonly) rounding. The year value can be large and/or\n\
+      \    negative. Any value covering the current or last century should\n    be\
+      \ correctly processed, but some systems cannot process earlier\n    dates. The\
+      \ sub-second value is defined as an unlimited number of\n    digits after the\
+      \ decimal point. In Java a minimum of millisecond\n    precision is guaranteed.\
+      \ In C++ microsecond precision is\n    guaranteed, with nanosecond precision\
+      \ being available on some\n    platforms. Time zones are supported, eg\n   \
+      \ '2013-10-24T11:52:33+01:00' for Paris, but in most cases it will\n    be converted\
+      \ to UTC when the timestamp is written.\n:ivar experimenter_ref:\n:ivar description:\
+      \ A description for the image. [plain-text multi-\n    line string]\n:ivar experiment_ref:\n\
+      :ivar experimenter_group_ref:\n:ivar instrument_ref:\n:ivar objective_settings:\n\
+      :ivar imaging_environment:\n:ivar stage_label:\n:ivar pixels:\n:ivar roiref:\n\
+      :ivar microbeam_manipulation_ref:\n:ivar annotation_ref:\n:ivar id:\n:ivar name:"
+    slots:
+    - experimenter_ref
+    - description
+    - experiment_ref
+    - experimenter_group_ref
+    - instrument_ref
+    - objective_settings
+    - imaging_environment
+    - stage_label
+    - pixels
+    - roiref
+    - microbeam_manipulation_ref
+    - annotation_ref
+    - id
+    - name
+    slot_usage:
+      experimenter_ref: {}
+      description: {}
+      experiment_ref: {}
+      experimenter_group_ref: {}
+      instrument_ref: {}
+      objective_settings: {}
+      imaging_environment: {}
+      stage_label: {}
+      pixels: {}
+      roiref:
+        multivalued: true
+        range: Roiref
+      microbeam_manipulation_ref:
+        multivalued: true
+        range: MicrobeamManipulationRef
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+  Value:
+    slots:
+    - any_element
+    slot_usage:
+      any_element:
+        multivalued: true
+  Xmlannotation:
+    description: 'An general xml annotation.
+
+
+      The contents of this is not processed as OME XML but should still be
+
+      well-formed XML.'
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value: {}
+  ExternalCompression:
+    description: An enumeration.
+  External:
+    description: "Describes a file location.\n\nCan optionally specify a portion of\
+      \ a file using Offset and a\nReadLength. If Offset and ReadLength are specified\
+      \ in conjuction\nwith Compression, then they point into the uncompressed file.\n\
+      \n:ivar href: file location\n:ivar sha1: The digest of the file specified in\
+      \ href.\n:ivar compression: Specifies the compression scheme used to encode\n\
+      \    the data."
+    slots:
+    - href
+    - sha1
+    - compression
+    slot_usage:
+      href: {}
+      sha1: {}
+      compression: {}
+  BinaryFile:
+    description: 'Describes a binary file.
+
+
+      :ivar external:
+
+      :ivar bin_data:
+
+      :ivar file_name:
+
+      :ivar size: Size of the uncompressed file. [unit:bytes]
+
+      :ivar mimetype:'
+    slots:
+    - external
+    - bin_data
+    - file_name
+    - size
+    - mimetype
+    slot_usage:
+      external: {}
+      bin_data: {}
+      file_name: {}
+      size:
+        range: integer
+      mimetype: {}
+  FileAnnotation:
+    description: A file object annotation.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - binary_file
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      binary_file: {}
+  ListAnnotation:
+    description: 'This annotation is a grouping object.
+
+
+      It uses the sequence of annotation refs from the base Annotation to
+
+      form the list.'
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+  LongAnnotation:
+    description: A simple numerical annotation of type xsd:long.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value:
+        range: integer
+  DoubleAnnotation:
+    description: A simple numerical annotation of type xsd:double.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value:
+        range: float
+  CommentAnnotation:
+    description: A simple comment annotation.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value: {}
+  BooleanAnnotation:
+    description: A simple boolean annotation of type xsd:boolean.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value:
+        range: boolean
+  TimestampAnnotation:
+    description: A date/time annotation of type xsd:dateTime.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+  TagAnnotation:
+    description: A tag annotation (represents a tag or a tagset)
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value: {}
+  TermAnnotation:
+    description: A ontology term annotation.
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value: {}
+  MapAnnotation:
+    description: 'An map annotation.
+
+
+      The contents of this is a list of key/value pairs.'
+    slots:
+    - description
+    - annotation_ref
+    - id
+    - namespace
+    - annotator
+    - value
+    slot_usage:
+      description: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      id: {}
+      namespace: {}
+      annotator: {}
+      value: {}
+  StructuredAnnotations:
+    description: 'An unordered collection of annotation attached to objects in the
+      OME data
+
+      model.'
+    slots:
+    - xmlannotation
+    - file_annotation
+    - list_annotation
+    - long_annotation
+    - double_annotation
+    - comment_annotation
+    - boolean_annotation
+    - timestamp_annotation
+    - tag_annotation
+    - term_annotation
+    - map_annotation
+    slot_usage:
+      xmlannotation:
+        multivalued: true
+        range: Xmlannotation
+      file_annotation:
+        multivalued: true
+        range: FileAnnotation
+      list_annotation:
+        multivalued: true
+        range: ListAnnotation
+      long_annotation:
+        multivalued: true
+        range: LongAnnotation
+      double_annotation:
+        multivalued: true
+        range: DoubleAnnotation
+      comment_annotation:
+        multivalued: true
+        range: CommentAnnotation
+      boolean_annotation:
+        multivalued: true
+        range: BooleanAnnotation
+      timestamp_annotation:
+        multivalued: true
+        range: TimestampAnnotation
+      tag_annotation:
+        multivalued: true
+        range: TagAnnotation
+      term_annotation:
+        multivalued: true
+        range: TermAnnotation
+      map_annotation:
+        multivalued: true
+        range: MapAnnotation
+  AffineTransform:
+    description: "A matrix used to transform the shape.\n\n\u23A1 A00, A01, A02 \u23A4\
+      \ \u23A2 A10, A11, A12 \u23A5 \u23A3 0,   0,   1   \u23A6"
+    slots:
+    - a00
+    - a10
+    - a01
+    - a11
+    - a02
+    - a12
+    slot_usage:
+      a00:
+        range: float
+      a10:
+        range: float
+      a01:
+        range: float
+      a11:
+        range: float
+      a02:
+        range: float
+      a12:
+        range: float
+  ShapeFillRule:
+    description: 'The rule used to decide which parts of the shape to fill.
+
+
+      [enumeration]'
+  ShapeFontFamily:
+    description: 'The font family used to draw the text.
+
+
+      [enumeration]
+
+      Note: these values are all lower case so they match
+
+      the standard HTML/CSS values. "fantasy" has been
+
+      included for completeness; we do not recommend its
+
+      regular use. This attribute is under consideration
+
+      for removal from the OME-XML schema.'
+  ShapeFontStyle:
+    description: 'The style and weight applied to the text.
+
+
+      [enumeration] This is a simplified combination of the HTML/CSS
+
+      attributes font-style AND font-weight.'
+  Label:
+    description: "The text label.\n\nAny transformation should be applied at the shape\
+      \ level.\n\n:ivar x: This defines the X coordinate of the current text position\n\
+      \    of the first character in the string. [units pixels]\n:ivar y: This defines\
+      \ the Y coordinate of the current text position\n    of the first character\
+      \ in the string. [units pixels]"
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - x
+    - y
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      x:
+        range: float
+      y:
+        range: float
+  Polygon:
+    description: "The Polygon defines closed shapes formed of straight lines.\n\n\
+      Note: Polygon uses counterclockwise winding (this is the\ndefault OpenGL behavior)\n\
+      \n:ivar points: The points of the Polygon are defined as a list of\n    comma\
+      \ separated x,y coordinates seperated by spaces like \"x1,y1\n    x2,y2 x3,y3\"\
+      \ e.g. \"0,0 1,2 3,5\""
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - points
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      points: {}
+  Marker:
+    description: 'Shape of marker on the end of a line.
+
+
+      [enumeration]'
+  Polyline:
+    description: "The Polyline defines open shapes formed of straight lines.\n\nNote:\
+      \ Polyline uses counterclockwise winding (this is the\ndefault OpenGL behavior)\n\
+      \n:ivar points: The points of the polyline are defined as a list of\n    comma\
+      \ separated x,y coordinates seperated by spaces like \"x1,y1\n    x2,y2 x3,y3\"\
+      \ e.g. \"0,0 1,2 3,5\"\n:ivar marker_start:\n:ivar marker_end:"
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - points
+    - marker_start
+    - marker_end
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      points: {}
+      marker_start: {}
+      marker_end: {}
+  Line:
+    description: 'A straight line defined by it''s end points.
+
+
+      :ivar x1: The X coordinate of the start of the line. [units pixels]
+
+      :ivar y1: The Y coordinate of the start of the line. [units pixels]
+
+      :ivar x2: The X coordinate of the end of the line. [units pixels]
+
+      :ivar y2: The Y coordinate of the end of the line. [units pixels]
+
+      :ivar marker_start:
+
+      :ivar marker_end:'
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - x1
+    - y1
+    - x2
+    - y2
+    - marker_start
+    - marker_end
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      x1:
+        range: float
+      y1:
+        range: float
+      x2:
+        range: float
+      y2:
+        range: float
+      marker_start: {}
+      marker_end: {}
+  Ellipse:
+    description: "A simple ellipse object.\n\nIf rotation is required apply a transformation\
+      \ at the Shape level.\n\n:ivar x: The X coordinate of the center of the ellipse.\
+      \ [units\n    pixels]\n:ivar y: The Y coordinate of the center of the ellipse.\
+      \ [units\n    pixels]\n:ivar radius_x: The horizontal radius of the ellipse.\
+      \ [units pixels]\n:ivar radius_y: The vertical radius of the ellipse. [units\
+      \ pixels]"
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - x
+    - y
+    - radius_x
+    - radius_y
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      x:
+        range: float
+      y:
+        range: float
+      radius_x:
+        range: float
+      radius_y:
+        range: float
+  Point:
+    description: ':ivar x: The X coordinate of the point. [units pixels]
+
+      :ivar y: The Y coordinate of the point. [units pixels]'
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - x
+    - y
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      x:
+        range: float
+      y:
+        range: float
+  Mask:
+    description: "The Mask ROI shape is a link to a BinData object that is a BIT mask\
+      \ drawn on\ntop of the image as an ROI.\n\nIt is applied at the same scale,\
+      \ pixel to pixel, as the Image the\nROI is applied to, unless a transform is\
+      \ applied at the shape level.\n\n:ivar bin_data:\n:ivar x: The X coordinate\
+      \ of the left side of the image. [units\n    pixels]\n:ivar y: The Y coordinate\
+      \ of the top side of the image. [units\n    pixels]\n:ivar width: The width\
+      \ of the mask. [units pixels]\n:ivar height: The height of the mask. [units\
+      \ pixels]"
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - bin_data
+    - x
+    - y
+    - width
+    - height
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      bin_data: {}
+      x:
+        range: float
+      y:
+        range: float
+      width:
+        range: float
+      height:
+        range: float
+  Rectangle:
+    description: "A simple rectangle object.\n\nIf rotation is required apply a transformation\
+      \ at the Shape level.\n\n:ivar x: The X value of the left edge or the rectangle.\
+      \ [units\n    pixels]\n:ivar y: The y value of the top edge or the rectangle.\
+      \ [units\n    pixels]\n:ivar width: The width of the rectangle. [units pixels]\n\
+      :ivar height: The height of the rectangle. [units pixels]"
+    slots:
+    - transform
+    - annotation_ref
+    - fill_color
+    - fill_rule
+    - stroke_color
+    - stroke_width
+    - stroke_width_unit
+    - stroke_dash_array
+    - text
+    - font_family
+    - font_size
+    - font_size_unit
+    - font_style
+    - locked
+    - id
+    - the_z
+    - the_t
+    - the_c
+    - x
+    - y
+    - width
+    - height
+    slot_usage:
+      transform: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      fill_color:
+        range: integer
+      fill_rule: {}
+      stroke_color:
+        range: integer
+      stroke_width:
+        range: float
+      stroke_width_unit: {}
+      stroke_dash_array: {}
+      text: {}
+      font_family: {}
+      font_size:
+        range: integer
+      font_size_unit: {}
+      font_style: {}
+      locked:
+        range: boolean
+      id: {}
+      the_z:
+        range: integer
+      the_t:
+        range: integer
+      the_c:
+        range: integer
+      x:
+        range: float
+      y:
+        range: float
+      width:
+        range: float
+      height:
+        range: float
+  UnionType:
+    slots:
+    - label
+    - polygon
+    - polyline
+    - line
+    - ellipse
+    - point
+    - mask
+    - rectangle
+    slot_usage:
+      label:
+        multivalued: true
+        range: Label
+      polygon:
+        multivalued: true
+        range: Polygon
+      polyline:
+        multivalued: true
+        range: Polyline
+      line:
+        multivalued: true
+        range: Line
+      ellipse:
+        multivalued: true
+        range: Ellipse
+      point:
+        multivalued: true
+        range: Point
+      mask:
+        multivalued: true
+        range: Mask
+      rectangle:
+        multivalued: true
+        range: Rectangle
+  Roi:
+    description: "A four dimensional 'Region of Interest'.\n\nIf they are not used,\
+      \ and the Image has more than one plane, the\nentire set of planes is assumed\
+      \ to be included in the ROI. Multiple\nROIs may be specified.\n\n:ivar union:\n\
+      :ivar annotation_ref:\n:ivar description: A description for the ROI. [plain-text\
+      \ multi-line\n    string]\n:ivar id:\n:ivar name: The Name identifies the ROI\
+      \ to the user. [plain-text\n    string]"
+    slots:
+    - union
+    - annotation_ref
+    - description
+    - id
+    - name
+    slot_usage:
+      union: {}
+      annotation_ref:
+        multivalued: true
+        range: AnnotationRef
+      description: {}
+      id: {}
+  BinaryOnly:
+    description: ":ivar metadata_file: Filename of the OME-XML metadata file for\n\
+      \    this binary data. If the file cannot be found, a search can\n    be performed\
+      \ based on the UUID.\n:ivar uuid: The unique identifier of another OME-XML block\
+      \ whose\n    metadata describes the binary data in this file. This UUID\n  \
+      \  is considered authoritative regardless of mismatches in the\n    filename."
+    slots:
+    - metadata_file
+    - uuid
+    slot_usage:
+      metadata_file: {}
+      uuid: {}
+  OME:
+    slots:
+    - rights
+    - project
+    - dataset
+    - folder
+    - experiment
+    - plate
+    - screen
+    - experimenter
+    - experimenter_group
+    - instrument
+    - image
+    - structured_annotations
+    - roi
+    - binary_only
+    - uuid
+    - creator
+    slot_usage:
+      rights: {}
+      project:
+        multivalued: true
+        range: Project
+      dataset:
+        multivalued: true
+        range: Dataset
+      folder:
+        multivalued: true
+        range: Folder
+      experiment:
+        multivalued: true
+        range: Experiment
+      plate:
+        multivalued: true
+        range: Plate
+      screen:
+        multivalued: true
+        range: Screen
+      experimenter:
+        multivalued: true
+        range: Experimenter
+      experimenter_group:
+        multivalued: true
+        range: ExperimenterGroup
+      instrument:
+        multivalued: true
+        range: Instrument
+      image:
+        multivalued: true
+        range: Image
+      structured_annotations: {}
+      roi:
+        multivalued: true
+        range: Roi
+      binary_only: {}
+      uuid: {}
+      creator: {}
