@@ -936,7 +936,7 @@ property_value: https://w3id.org/linkml/attributes "{}" xsd:string
 
 [Term]
 id: OME:0073
-name: OME
+name: OMETopLevel
 relationship: binary_only https://w3id.org/linkml/String {maxCardinality="1"}
 relationship: creator https://w3id.org/linkml/String {maxCardinality="1"}
 relationship: dataset Dataset {all_only="true"} ! Dataset
