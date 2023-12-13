@@ -1,0 +1,9 @@
+format-version: 1.2
+ontology: TEST
+property_value: owl:versionInfo "TEST version 0.1" xsd:string
+
+[Term]
+id: TEST:0000
+name: first term
+def: "just something that should show up in the UI"
+comment: "please"
